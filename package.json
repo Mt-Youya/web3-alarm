@@ -11,6 +11,7 @@
   "dependencies": {
     "@tailwindcss/forms": "^0.5.7",
     "@types/node": "^20.12.7",
+    "antd": "^5.16.1",
     "autoprefixer": "^10.4.19",
     "dayjs": "^1.11.10",
     "eth-revert-reason": "^1.0.3",

@@ -1,14 +1,15 @@
 import { createContext } from "react"
-import { ethers, parseEther } from "ethers"
+import { ethers, parseEther,AbiCoder  } from "ethers"
 import { contractABI, contractAddress } from "@/constants/contractConfig.json"
 
 export const ClockContext = createContext()
 
 const { ethereum } = window
+export const abiCoder = new AbiCoder()
 
-function createEthereumContract() {
+async function createEthereumContract() {
     const provider = new ethers.BrowserProvider(ethereum)
-    const signer = provider.getSigner()
+    const signer = await provider.getSigner()
     return new ethers.Contract(contractAddress, contractABI, signer)
 }
 

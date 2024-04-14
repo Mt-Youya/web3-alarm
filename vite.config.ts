@@ -28,7 +28,7 @@ export default defineConfig({
                 entryFileNames: "assets/js/[name].[hash].js",
                 compact: true,
                 manualChunks: {
-                    react: ["react", "react-dom", "react-icons"],
+                    react: ["react", "react-dom"],
                     ethers: ["ethers", "eth-revert-reason"],
                     tailwind: ["autoprefixer", "@tailwindcss/forms", "postcss"],
                 },

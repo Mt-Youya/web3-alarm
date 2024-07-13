@@ -1,15 +1,13 @@
 import "./App.css"
 import Alarm from "./components/Alarm"
-import ClockProvider from "./contexts/clock.tsx"
+import ClockProvider from "./contexts/clock"
 
 function App() {
 
     return (
-        <div>
-            <ClockProvider>
-                <Alarm />
-            </ClockProvider>
-        </div>
+        <ClockProvider>
+            <Alarm />
+        </ClockProvider>
     )
 }
 
